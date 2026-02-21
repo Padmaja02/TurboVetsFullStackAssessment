@@ -103,68 +103,64 @@ npm install
 npx nx serve api
 ```
 Backend runs at:
-
+```
 http://localhost:3000
+```
 
 Ensure PostgreSQL is running and properly configured.
 
-Frontend Setup
+## Frontend Setup
+```
 cd turbo-vets-ui
 npm install
 ng serve
+```
 
 Frontend runs at:
-
+```
 http://localhost:4200
-Design Considerations
+```
 
-Backend-first permission enforcement
+# Design Considerations
+- Backend-first permission enforcement
+- Organization-level access restriction
+- Clean separation of authentication vs authorization
+- Minimal but functional UI
+- Secure data access validation in service layer
 
-Organization-level access restriction
+# Future Improvements
+- Store audit logs in database
+- Add pagination support
+- Implement UI notifications
+- Add global error handling
+- Enhance UI styling
+- Add automated tests
 
-Clean separation of authentication vs authorization
+# Project Structure
 
-Minimal but functional UI
-
-Secure data access validation in service layer
-
-Future Improvements
-
-Store audit logs in database
-
-Add pagination support
-
-Implement UI notifications
-
-Add global error handling
-
-Enhance UI styling
-
-Add automated tests
-
-Project Structure
-Backend
+## Backend
+```
 apps/api/
   ├── auth/
   ├── tasks/
   ├── organization/
   ├── user/
-Frontend
+```
+
+## Frontend
+```
 src/app/
   ├── login/
   ├── tasks/
   ├── services/
   ├── interceptors/
-Final Notes
+```
+
+# Final Notes
 
 This implementation focuses on:
-
-Strong backend security
-
-Clear RBAC logic
-
-Multi-tenant correctness
-
-Clean API integration
-
-Minimal yet functional UI
+- Strong backend security
+- Clear RBAC logic
+- Multi-tenant correctness
+- Clean API integration
+- Minimal yet functional UI

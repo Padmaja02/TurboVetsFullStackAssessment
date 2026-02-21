@@ -1,0 +1,51 @@
+<div style="padding: 20px; font-family: Arial; max-width: 800px;">
+<p style="color: green">{{ message }}</p>
+
+<p><strong>Logged in as:</strong> {{ userRole }}</p>
+
+<h2>Tasks</h2>
+
+<div>
+  <input [(ngModel)]="title" placeholder="Title" />
+</div>
+<br />
+
+<div>
+  <input [(ngModel)]="description" placeholder="Description" />
+</div>
+<br />
+
+<div>
+  <input [(ngModel)]="category" placeholder="Category" />
+</div>
+<br />
+
+<button (click)="createTask()">Create Task</button>
+<button (click)="logout()">Logout</button>
+
+<hr />
+
+<ul>
+  <li *ngFor="let task of tasks">
+    {{ task.title }} - {{ task.category }}
+
+    <button *ngIf="canEdit"
+        (click)="editTask(task)">
+        Edit
+    </button>
+
+    <button *ngIf="canDelete"
+        (click)="deleteTask(task.id)">
+        Delete
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="editingTask">
+  <h3>Edit Task</h3>
+  <input [(ngModel)]="editingTask.title" />
+  <input [(ngModel)]="editingTask.description" />
+  <input [(ngModel)]="editingTask.category" />
+  <button (click)="saveUpdate()">Save</button>
+</div>
+</div>

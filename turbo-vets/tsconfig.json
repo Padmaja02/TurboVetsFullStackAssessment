@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": [],
+    "lib": ["ES2022", "DOM"]
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./api-e2e"
+    },
+    {
+      "path": "./api"
+    }
+  ]
+}

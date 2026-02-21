@@ -1,0 +1,7 @@
+export enum Permission {
+  TASK_CREATE = 'TASK_CREATE',
+  TASK_VIEW = 'TASK_VIEW',
+  TASK_EDIT = 'TASK_EDIT',
+  TASK_DELETE = 'TASK_DELETE',
+  VIEW_AUDIT = 'VIEW_AUDIT',
+}
